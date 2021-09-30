@@ -1,0 +1,561 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --mainfont:font-family: 'Raleway', sans-serif;
+    --subfont:font-family: 'Open Sans', sans-serif;
+    --parafont:font-family: 'Cardo', serif;
+    --brand:#e84545;
+    --overlay:rgba(232, 69, 69, 0.9);
+    --brandoverlay:rgba(43, 46, 74, 0.95);
+    --headcolor:#2d3033;
+    --paracolor:#6c7279; 
+    --backcolor:#3a3e64;
+    
+
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+img{
+    vertical-align: middle;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+/* ================
+    common css ends
+====================*/
+
+
+.rale-13{
+    font-family: var(--mainfont);
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.rale-bold{
+    font-family: var(--mainfont);
+    font-weight: 700;
+}
+
+.rale-reg{
+    font-family: var(--mainfont);
+    font-weight: 400;
+}
+
+.rale-light{
+    font-family: var(--mainfont);
+    font-weight: 300;
+}
+
+.open-bold{
+    font-family: var(--subfont);
+    font-weight: 700;
+}
+
+.open-reg{
+    font-family: var(--subfont);
+    font-weight: 400;
+}
+
+.cardo-italic{
+    font-family: var(--parafont);
+    font-style: italic;
+    font-weight: 400;
+}
+
+.text-upper{
+    text-transform: uppercase;
+}
+
+.text-capital{
+    text-transform: capitalize;
+}
+
+.text-white{
+    color:#fff;
+}
+.text-whitemore{
+    color:#ffffff;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.cta-btn{
+    font-family: var(--mainfont);
+    font-weight: 600px;
+    font-size: 13px;
+    background: var(--brand);
+    display: inline-block;
+    line-height: 46px;
+}
+/* ================
+    typography css ends
+====================*/
+
+
+nav{
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+nav .navbar{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+nav .navbar .logo{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+nav .navbar .logo img{
+    width: 100%;
+}
+
+nav .navbar .nav-list{
+    width: 600px;
+    height: 100px;
+}
+
+nav .navbar .nav-list ul{
+    display: flex;
+    align-items: center;
+    height: inherit;
+    justify-content: space-between;
+}
+
+nav .navbar .nav-list ul li a{
+    color: rgba(255, 255, 255, 0.75);
+}
+/* ================
+    navber  css ends
+====================*/
+
+
+#banner{
+    height: 750px;
+    background: url(../images/banner.jpg) no-repeat center / cover;
+    position: relative;
+    z-index: 1;
+}
+
+#banner::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--brandoverlay);
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+#banner .banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*for centwr in main axis*/
+    align-items: center;/*for centwr in cross axis*/
+    height: 750px;
+}
+
+#banner .banner h1{
+    font-size: 65px;
+    line-height: 71px ;
+    padding: 0 30px;
+}
+
+#banner .banner p{
+    font-size: 22px;
+    padding: 0 180px; 
+    margin-top: 70px; 
+    margin-bottom: 75px;
+}
+
+#banner .banner .cta-btn{
+    padding: 0 55px;
+}
+/* ================
+    banner  css ends
+====================*/
+
+
+#feature{
+    height: 450px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+#feature .feature{
+    height: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#feature .feature .feature-item{
+    height: 190px;
+}
+
+#feature .feature .feature-item{
+    height: 190px;
+    width: 370px;
+}
+
+#feature .feature .feature-item h4{
+    color: var(--headcolor);
+    font-size: 14px;
+    padding: 35px 28px;
+
+}
+
+#feature .feature .feature-item p{
+    color: var(--paracolor);
+    font-size: 14px;
+    padding: 0 50px;
+} 
+/* ================
+    feature css ends
+====================*/
+
+
+
+
+#gallery{
+    background-color: antiquewhite;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#gallery .gallery-item{
+    width: 25%;
+    position: relative;   
+}
+
+#gallery .gallery-item img{
+    width: 100%; 
+    height: 100%;  
+}
+
+#gallery .gallery-item .overlay{
+    height: 100%;
+    width: 100%;
+    background-color: var(--overlay);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all linear 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} 
+
+#gallery .gallery-item:hover .overlay{
+    opacity: 1;
+}
+
+#gallery .gallery-item .overlay h4{
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#gallery .gallery-item .overlay p{
+    font-size: 14px;
+    color: #ffffff;
+}
+/* ================
+    gallery css ends
+====================*/
+
+
+
+
+#team{
+    width: 100%;
+    height: 580px;
+    background-color: #ffffff;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#team .team{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#team .team .team-item{
+    width: 270px;
+    height: 100%;   
+}
+
+#team .team .team-item img{
+    width: 100%;
+}
+
+#team .team .team-item h4{
+    font-size: 22px;
+    color:#2d3033;
+    padding-top: 30px;
+}
+
+#team .team .team-item h6{
+    font-size: 13px;
+    color:var(--brand);
+    padding-top: 15px;
+}
+
+#team .team .team-item p{
+    font-size: 14px;
+    color:var(--paracolor);
+    line-height: 21px;
+    padding-top: 30px;
+    padding-right: 7px;
+    padding-bottom: 28px;
+}
+
+#team .team .team-item  i{
+    color: #c6cacc;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #c6cacc;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+
+#team .team .team-item  i:hover{
+    border-color: var(--brand);
+    color: var(--brand);
+}
+/* ================
+    team css ends
+====================*/
+
+
+
+
+#feedback{
+    height: 500px;
+    background-color: #53354a;
+    position: relative;
+    z-index: 1;
+}
+
+#feedback::after{
+    content: '';
+    width: 50%;
+    height: 500px;
+    background:url(../images/feedback.jpg) no-repeat center / cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+#feedback .feedback{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#feedback .feedback .feedback-text{
+    height: 100%;
+    width: 500px;
+    padding-top: 115px;
+    box-sizing: border-box;
+
+}
+
+#feedback .feedback .feedback-text q{
+    font-size: 34px;
+    line-height: 42px;   
+}
+
+#feedback .feedback .feedback-text p{
+    font-size: 13px;
+    padding-top: 25px;
+}
+
+#feedback .feedback .feedback-text .dots{
+    display: flex;
+    justify-content: center; 
+    padding-top:62px;  
+}
+
+#feedback .feedback .feedback-text .dots ul li{
+    width: 12px;
+    height: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    top:0;
+    left:0px;
+    border-radius: 50%;
+    display: inline-block;
+    transition:all linear 0.5s ;
+    -webkit-transition:all linear 0.5s ;
+    -moz-transition:all linear 0.5s ;
+    -ms-transition:all linear 0.5s ;
+    -o-transition:all linear 0.5s ;
+}
+
+#feedback .feedback .feedback-text .dots ul li:hover{
+    background-color: #ffffff;
+}
+/* ================
+    feedback css ends
+====================*/
+
+
+
+#download{
+    height: 340px;
+    background-color: #fff;
+}
+
+#download .download{
+    height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;/*for centwr in main axis*/
+    align-items: center;/*for centwr in cross axis*/
+}
+
+#download .download h4{
+    color: var(--headcolor);
+    font-size: 28px;
+    padding-bottom: 22px;
+    box-sizing: border-box;
+}
+
+#download .download p{
+    color: var(--headcolor);
+    font-size: 13px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+#download .download .cta-btn{
+    padding: 0 100px;
+}
+/* ================
+    download css ends
+====================*/
+
+
+
+
+#address{
+    height: 250px;
+    background-color: var(--backcolor);
+}
+
+#address .address{
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+#address .address .address-item{
+    height: 250px;
+    width: 370px;
+   
+}
+
+#address .address .address-item h4{
+    font-size: 14px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+}
+
+#address .address .address-item p{
+    font-size: 14px;
+    color: var(--paracolor);
+    line-height: 22.5px;
+    padding: 0 30px;
+}
+
+#address .address .address-item i{
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 40px;
+    transition: all linear 0.5s;
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+}
+/* ================
+    address css ends
+====================*/
+
+
+
+#copyright{
+    height: 95px;
+    background-color:#313454;
+}
+
+#copyright .copyright{
+    height: 95px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center; 
+}
+
+#copyright .copyright p{
+    color: var(--paracolor);  
+    line-height: 22px;
+}
+
+#copyright .copyright p span{
+    color: #ffffff;
+}
+
+#copyright .copyright p span i{
+    color: #eb0c0c;
+} 
+
+
+/* ================
+   copyright css ends
+====================*/
